@@ -1,0 +1,29 @@
+--Create a grocery store database
+
+CREATE TABLE Groceries (id INTEGER PRIMARY KEY, name TEXT, section TEXT, price INTEGER, quantity INTEGER);
+INSERT INTO Groceries VALUES (1, "Flour", "NonPerishables", 1.99, 4);
+INSERT INTO Groceries VALUES (2, "Eggs", "Dairy", 4.99, 2);
+INSERT INTO Groceries VALUES (3, "Milk", "Dairy", 2.99, 5);
+INSERT INTO Groceries VALUES (4, "Ground beef", "Meat", 5.99, 0);
+INSERT INTO Groceries VALUES (5, "Potatoes",  "Produce", 3.99, 6);
+INSERT INTO Groceries VALUES (6, "Carrots", "Prooduce", 1.99, 4);
+INSERT INTO Groceries VALUES (7, "Butter", "Dairy", 4.99, 3);
+INSERT INTO Groceries VALUES (8, "Cheddar", "Dairy", 2.99, 5);
+INSERT INTO Groceries VALUES (9, "Sour Cream", "Dairy", 1.99, 2);
+INSERT INTO Groceries VALUES (10, "Chicken Breast", "Meat", 6.99, 3);
+INSERT INTO Groceries VALUES (11, "Bread crumbs", "NonPerishables", 2.99, 6);
+INSERT INTO Groceries VALUES (12, "Pasta", "NonPerishables", 1.99, 3);
+INSERT INTO Groceries VALUES (13, "Broccoli", "Produce", .99, 5);
+INSERT INTO Groceries VALUES (14, "Asparagus","Produce",.99, 1);
+INSERT INTO Groceries VALUES (15, "Canned corn", "NonPerishables", 1.19, 7);
+
+SELECT SUM(quantity) FROM Groceries
+
+--display the database ordered by price. 
+SELECT * FROM Groceries 
+ORDER BY price asc;
+
+--what is the avg price of items in the Dairy section? 
+SELECT AVG(price) "avg Dairy item price"
+FROM Groceries
+where section='Dairy'; 
